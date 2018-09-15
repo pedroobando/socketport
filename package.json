@@ -1,0 +1,24 @@
+{
+  "name": "test-socket.io",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "dependencies": {
+    "@serialport/parser-cctalk": "^2.0.1",
+    "express": "^4.16.3",
+    "serialport": "^7.0.2",
+    "socket.io": "^2.1.1"
+  },
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "scripts": {
+    "dev": "node_modules/.bin/nodemon lib/app.js",
+    "dev2": "node_modules/.bin/nodemon app2.js",
+    "dev3": "node_modules/.bin/nodemon app3.js",
+    "dev4": "node_modules/.bin/nodemon app4.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
