@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lectura de Arduino</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+	</head>
+<body>
+	<h1>Servidor peso romana</h1>
+	<div id="app">
+		<h2>
+			<strong><label id="peso">Peso de la Romana:</label></strong>
+			<em>{{ mensaje }}</em>
+		</h2>
+	</div>
+  <script>
+		var laDireccion = 'http://10.20.181.101:3000';
+		var socket = io(laDireccion);
+		var elPeso = '';
+		socket.on('lectura', (lectura) => {
+			// console.log(lectura);
+			// elPeso = lectura;
+			socket.emit('my other event', { my: 'data' });
+			app.mensaje = lectura;
+		});
+
+		const app = new Vue({
+			el: '#app',
+			data: {
+				mensaje: '000,00'
+			}
+		})				
+   </script>
+</body>
+</html>
