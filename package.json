@@ -9,15 +9,15 @@
     "dev2": "node_modules/.bin/nodemon app2.js",
     "dev3": "node_modules/.bin/nodemon app3.js",
     "dev4": "node_modules/.bin/nodemon app4.js",
-    "dev5": "node_modules/.bin/nodemon app5.js"
+    "dev5": "node_modules/.bin/nodemon lib/app5.js"
   },
   "keywords": [],
   "author": "Pedro Obando",
   "license": "ISC",
   "dependencies": {
-    "@serialport/parser-byte-length": "^8.0.4",
     "express": "^4.17.1",
     "serialport": "^8.0.5",
+    "@serialport/parser-byte-length": "^8.0.4",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
