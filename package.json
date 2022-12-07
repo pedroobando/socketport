@@ -15,7 +15,7 @@
   "author": "Pedro Obando",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "serialport": "^8.0.5",
     "@serialport/parser-byte-length": "^8.0.4",
     "socket.io": "^2.3.0"
